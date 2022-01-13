@@ -1,36 +1,3 @@
-import enum
-
-class Action(enum.Enum):
-    take = enum.auto()
-    drop = enum.auto()
-    use = enum.auto()
-    openIt = enum.auto()
-    closeIt = enum.auto()
-    look = enum.auto()
-    read = enum.auto()
-    push = enum.auto()
-    pull = enum.auto()
-    switchOn = enum.auto()
-    switchOff = enum.auto()
-    toggle = enum.auto()
-    inventory = enum.auto()
-    go = enum.auto()
-    fail = enum.auto()
-    cast = enum.auto()
-
-class Spell(enum.Enum):
-    rezrov = enum.auto()
-    kendall = enum.auto()
-    spakemoon = enum.auto()
-    frotz = enum.auto()
-    gnustu = enum.auto
-
-
-
-#Command restructuring vars
-twoWordsList={"pick up","check inventory", "look at"}
-removeList={"up", "check", "switch", "with", "on", "in", "at", "the", "and"}
-
 #Action lists
 takeList={"take","grab", "pick"}
 dropList = {"put", "drop"}
@@ -47,13 +14,18 @@ goList = {"go", "move"}
 droplist={"drop"}
 castList = {"cast"}
 directionList = {"n","s","e","w", "north","south","east","west","up","u","down","d"}
+spellList={"rezrov", "kendall", "spakemoon", "throck", "frotz", "gnusto"}
 
-#action lists
+#Command restructuring vars
+twoWordsList={"pick up","check inventory", "look at"}
+removeList={"up", "check", "switch", "with", "on", "in", "at", "the", "and"}
+
+
 actionLists=(takeList | dropList | useList | openList | closeList | lookList |
     pushList | pullList | switchList | inventoryList | goList | directionList | droplist | castList | readList)
 
 
-def validate(command):
+def validateCommand(command, Action):
 
     is_valid = True
     theAction = Action.fail
