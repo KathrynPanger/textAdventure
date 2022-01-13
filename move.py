@@ -17,7 +17,7 @@ Map.layout = {
             ["Wet Corner", "Flooded Pit"]
         ],
         2: [
-            [None, "car", None, None],
+            [None, "Car", None, None],
             ["Study", "Foyer", "Lounge" ],
             ["Library", "Main hall", "Dining Room"],
             ["Small Bathroom", "Short Hall", "Stair Landing"],
@@ -31,15 +31,19 @@ Map.layout = {
             ]
         }
 Map.playerX = 1
-Map.playerY = 0
+Map.playerY = 2
 Map.playerZ = 2
+Map.theLocation = Map.layout[Map.playerZ][Map.playerY-1][Map.playerX]
 
 def getLocation():
-    return [Map.playerX, Map.playerY, Map.playerZ]
+    return (Map.theLocation,[Map.playerZ, Map.playerY, Map.playerX])
 
 def movePlayer(direction):
     if direction == "n":
-        if Map.playerY-1 >= 0 and Map.layout[Map.playerX, Map.playerY-1, Map.playerZ] != None:
+        if Map.playerY-1 >= 0 and Map.layout[Map.playerZ][Map.playerY-1][Map.playerX] != None:
             Map.playerY -= 1
+            Map.theLocation = Map.layout[Map.playerZ][Map.playerY-1][Map.playerX]
+
         else:
             print("You can't go that way")
+            print(Map.layout[Map.playerZ][Map.playerY-1][Map.playerX])
