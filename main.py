@@ -1,6 +1,7 @@
-from dataclasses import dataclass
-
-import command as c
+import move
+import command
 import action
-check = c.validateCommand("take book", action.Action)
-print(c.spellList)
+theLocation = move.getLocation()
+print(theLocation)
+move.movePlayer("n")
+print(theLocation)

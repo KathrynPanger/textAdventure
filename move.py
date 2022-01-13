@@ -36,3 +36,10 @@ Map.playerZ = 2
 
 def getLocation():
     return [Map.playerX, Map.playerY, Map.playerZ]
+
+def movePlayer(direction):
+    if direction == "n":
+        if Map.playerY-1 >= 0 and Map.layout[Map.playerX, Map.playerY-1, Map.playerZ] != None:
+            Map.playerY -= 1
+        else:
+            print("You can't go that way")
