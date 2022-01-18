@@ -1,0 +1,19 @@
+name: Red Room
+description: You stand in a small, square room like many others. The walls are painted blood red.
+exits: w,s
+items: gold key
+
+name: Green Room
+description: You stand in a small, square room like many others. The walls are painted a friendly, forest green.
+exits: e,s
+items: None
+
+name: Blue Room
+description: You stand in a small, square room like many others. The walls are a cool ocean-blue.
+exits: n,e
+items: None
+
+name: Treasure Room
+description: You stand in a small, square room like many others. The walls are a sunny yellow color.
+exits: n,e
+items: treasure chest, candy bar

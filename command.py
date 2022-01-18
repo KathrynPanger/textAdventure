@@ -1,3 +1,5 @@
+from action import Action
+
 #Action lists
 takeList={"take","grab", "pick"}
 dropList = {"put", "drop"}

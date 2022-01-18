@@ -1,38 +1,64 @@
+from typing import NamedTuple
+from room import Room
+import json
+
+
+"""
+class Location:
+    def __init__ (self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __repr__(self):
+        return f"Location(x={self.x}, y={self.y}, z={self.z})"
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y and self.z == other.z
+
+    def __hash__(self):
+        return hash((self.x, self.y, self.z))
+"""
+
+
+class Location(NamedTuple):
+    x: int
+    y: int
+    z: int
+
+"""
 class Map:
-    pass
+    def __init__(self, data):
+        self.data: dict[Location, str] = {}
+        for z, floor in data.items():
+            for y, row in enumerate(floor):
+                for x, room in enumerate(row):
+                    loc = Location(x,y,z)
+                    self.data[loc] = room
+                    """
 
-Map = Map()
-Map.layout = {
-        0: [
-        ["Covered Hole", "Atrium","Torture Chamber"],
-        [None, "Titan Hallway", None],
-        [None, "Bottom of Pit", None]
+class Map:
+    def __init__(self, data):
+        self.data: dict[Location, str] = {}
+        for z, floor in data.items():
+            for y, row in enumerate(floor):
+                for x, room in enumerate(row):
+                    loc = Location(x,y,z)
+                    self.data[loc] = Room(room)
+                    self.data[loc].set_properties()
 
-        ],
-        1: [
-            ["Cramped Corner", "Breaker Box", None],
-            ["Boiler Room", None, None],
-            ["Corridor End", "Dark Corridor", "Bottom of Stairs"],
-            ["Narrow Gap", None, None],
-            ["Wet Corner", "Flooded Pit"]
-        ],
-        2: [
-            [None, "car", None, None],
-            ["Study", "Foyer", "Lounge" ],
-            ["Library", "Main hall", "Dining Room"],
-            ["Small Bathroom", "Short Hall", "Stair Landing"],
-            ["Conservatory", "Ballroom", "Kitchen"]
-        ],
-        3: [
-            ["Master Bathroom", "Laboratory", "Secret Room"],
-            ["Master Bedroom", "Bloody Corridor", "Closet"],
-            ["Upstairs Bathroom", "Dim Passage", "Top of Stairs"],
-            ["Child's Bedroom", "Guest Bedroom", None],
-            ]
-        }
-Map.playerX = 1
-Map.playerY = 0
-Map.playerZ = 2
 
-def getLocation():
-    return [Map.playerX, Map.playerY, Map.playerZ]
+    def __getitem__(self, location: Location):
+        try:
+            return self.data[location]
+        except KeyError:
+            return None
+
+
+with open('mapData.json') as map_file:
+    data = json.load(map_file)
+
+map = Map(data)
+
+#The Player's Location
+playerLocation = Location(1,0,1)

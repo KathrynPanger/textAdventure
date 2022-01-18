@@ -1,8 +1,7 @@
-import move
+import map
 import command
 import action
-theLocation = move.getLocation()
-print(theLocation)
-move.movePlayer("n")
-theLocation = move.getLocation()
-print(theLocation)
+theLocation = map.playerLocation
+#print(move.map[theLocation])
+#print(move.map.data)
+
