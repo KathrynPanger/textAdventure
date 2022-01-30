@@ -9,9 +9,13 @@ class Room:
         self.description: str
         self.exits: list
         self.items: list
+        self.contents = []
 
     def __repr__(self):
         return f"{self.name}"
+
+    def __hash__(self):
+        return hash((self.name))
 
     def visit(self):
         self.is_visted = True

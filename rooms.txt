@@ -1,11 +1,11 @@
 name: Red Room
 description: You stand in a small, square room like many others. The walls are painted blood red.
-exits: w,s
+exits: e,s
 items: gold key
 
 name: Green Room
 description: You stand in a small, square room like many others. The walls are painted a friendly, forest green.
-exits: e,s
+exits: w,s
 items: None
 
 name: Blue Room
