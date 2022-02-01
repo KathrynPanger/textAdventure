@@ -6,7 +6,14 @@ from items import Item, Category, Container
 theLocation = map.playerLocation
 print(theLocation)
 
-barrel = Container("barrel", is_locked = True, is_lockable = True)
-#barrel.modifyContainer(is_open = False, is_lockable = True, is_locked = True, contents = [Item("necklace", Category.takeable)], keyLoc = theLocation)
+barrel = Container(name = "treasure_chest",
+                   printedName = "Treasure Chest",
+                   is_open = False, is_lockable = True,
+                   is_locked = True,
+                   contents = [Item(name = 'necklace')],
+                   keyLocation = theLocation,
+                   keyPrintedName = "Gold Key")
+#barrel.modifyContainer(is_open = False, is_lockable = True, is_locked = True, contents = [Item("necklace",)], keyLocation = theLocation)
 print(theLocation.contents)
-print(f"You found a {barrel:key}!")
+print(barrel.contents)
+#print(f"You found a {barrel:key}!")
