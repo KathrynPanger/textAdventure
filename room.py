@@ -8,8 +8,8 @@ class Room:
         self.has_properties = False
         self.description: str
         self.exits: list
-        self.items: list
-        self.contents = []
+        self.contents: list[Item]
+        self.player: Optional[Player] = None
 
     def __repr__(self):
         return f"{self.name}"

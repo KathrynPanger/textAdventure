@@ -64,3 +64,6 @@ class Supporter(Item):
         super().__init__(name, printedName)
         self.contents = contents
 
+
+class Dresser(Container, Supporter):
+    pass

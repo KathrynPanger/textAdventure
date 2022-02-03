@@ -41,6 +41,7 @@ class Map:
 class Map:
     def __init__(self, data):
         self.data: dict[Location, Room] = {}
+        self.entities: dict[Location, entity] = {}
         for z, floor in data.items():
             #JSON items are string, make z-value an integer
             z = int(z)
@@ -59,6 +60,7 @@ class Map:
             return self.data[location]
         except KeyError:
             return None
+
 
 with open('mapData.json') as map_file:
     data = json.load(map_file)
