@@ -12,7 +12,8 @@ class Category(Enum):
 @dataclass
 class Item:
     name: str
-    printedName: Optional[str] = None
+    printedName: Optional[str] = None,
+    sounds: Optional[Sound] = None
 
     def __post_init__(self):
         if self.printedName is None:

@@ -1,28 +1,32 @@
-import enum
+from enum import Enum, auto
 
-class Action(enum.Enum):
+class Action(Enum):
 
-    #base action
-    take = enum.auto()
-    drop = enum.auto()
-    use = enum.auto()
-    openIt = enum.auto()
-    closeIt = enum.auto()
-    look = enum.auto()
-    read = enum.auto()
-    push = enum.auto()
-    pull = enum.auto()
-    switchOn = enum.auto()
-    switchOff = enum.auto()
-    toggle = enum.auto()
-    inventory = enum.auto()
-    go = enum.auto()
-    fail = enum.auto()
-    cast = enum.auto()
+    #Default Actions
+    TAKE = auto(),
+    DROP = auto(),
+    OPEN = auto(),
+    CLOSE = auto(),
+    SWITCH_ON = auto(),
+    SWITCH_OFF = auto(),
+    PUT_ON = auto(),
+    PUSH = auto(),
+    PULL = auto(),
+    USE_WITH = auto(),
+    EXAMINE = auto(),
+    LOOK = auto(),
+    INVENTORY = auto(),
+    GO_TO = auto(),
+    TALK_TO = auto(),
 
-    #spells
-    rezrov = enum.auto()
-    kendall = enum.auto()
-    spakemoon = enum.auto()
-    frotz = enum.auto()
-    gnusto = enum.auto
+    #Special Actions
+    READ = auto(),
+    SHAKE = auto(),
+    EAT = auto(),
+    DRINK = auto(),
+    CAST = auto()
+
+    #Spells
+    REZROV = auto()
+
+
