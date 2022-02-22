@@ -21,6 +21,18 @@ class Grid():
                 x = self.columnThickness * i
                 y = self.rowThickness * j
                 self.points.append((x,y))
+        for i in range(len(self.points)):
+            point = self.points[i]
+            x1 = point[0]
+            y1 = point[1]
+            sameRowPoints = [item for item in self.points if
+                             item[0] == x1]
+            sameRowPoints.remove(point)
+            for newPoint in sameRowPoints:
+                x2 = newPoint[0]
+                y2 = newPoint[1]
+                if x1 == x2 and abs(y1 - y2) == self.rowThickness:
+                    print(f'points: {point}, {newPoint}')
 
 myGrid = Grid(width, height, 5, 5)
 #print(myGrid.points)
@@ -37,17 +49,7 @@ class Interface(pyglet.window.Window):
         self.gridBatch = pyglet.graphics.Batch()
         self.grid = Grid(width, height, 5, 5)
         self.gridSize = len(self.grid.points)
-        for i in range(len(self.grid.points)):
-            point = self.grid.points[i]
-            x1 = point[0]
-            y1 = point[1]
-            sameRowPoints = [item for item in self.grid.points if item[0] == x1]
-            sameRowPoints.remove(point)
-            for newPoint in sameRowPoints:
-                x2 = newPoint[0]
-                y2 = newPoint[1]
-                if x1 == x2 and abs(y1-y2) == self.grid.rowThickness:
-                    print (f'points: {point}, {newPoint}')
+
 
 
     def on_draw(self):
