@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40816545-747e-4672-aae1-247377797c32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Action.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/slicer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/belt_sound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/first10Seconds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action.py" beforeDir="false" afterPath="$PROJECT_DIR$/action.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item.py" beforeDir="false" afterPath="$PROJECT_DIR$/item.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

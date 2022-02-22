@@ -16,14 +16,14 @@ class Grid():
         self.rowThickness = height / maxRows
         self.columnThickness = width / maxColumns
         self.points = []
-        for i in range(1, self.maxColumns):
-            for j in range(1, self.maxRows):
+        for i in range(self.maxColumns + 1):
+            for j in range(self.maxRows + 1):
                 x = self.columnThickness * i
                 y = self.rowThickness * j
                 self.points.append((x,y))
 
 myGrid = Grid(width, height, 5, 5)
-print(myGrid.points)
+#print(myGrid.points)
 
 #textEntry = pyglet.gui.widgets.TextEntry("text", 10, 10, 30)
 
@@ -37,9 +37,17 @@ class Interface(pyglet.window.Window):
         self.gridBatch = pyglet.graphics.Batch()
         self.grid = Grid(width, height, 5, 5)
         self.gridSize = len(self.grid.points)
-        self.gridLines = []
-        for i in range(self.gridSize):
-            print(self.grid.points[i])
+        for i in range(len(self.grid.points)):
+            point = self.grid.points[i]
+            x1 = point[0]
+            y1 = point[1]
+            sameRowPoints = [item for item in self.grid.points if item[0] == x1]
+            sameRowPoints.remove(point)
+            for newPoint in sameRowPoints:
+                x2 = newPoint[0]
+                y2 = newPoint[1]
+                if x1 == x2 and abs(y1-y2) == self.grid.rowThickness:
+                    print (f'points: {point}, {newPoint}')
 
 
     def on_draw(self):
