@@ -37,18 +37,18 @@ class Tile:
 
 @dataclass
 class Style:
-      borderColor: list[int],
-      boarderThickness: int,
-      backgroundColor: list[int],
-      textColor: list[int],
-      textSize: int,
-      textFont: str,
-      textAnchor: str)
+      borderColor: list[int]
+      boarderThickness: int
+      backgroundColor: list[int]
+      textColor: list[int]
+      textSize: int
+      textFont: str
+      textAnchor: str
 
 @dataclass
 class Region:
-    groupNumber:[int],
-    borders: list[str],
+    groupNumber:[int]
+    borders: list[str]
     style: Style
 
 class Grid():
@@ -82,9 +82,7 @@ class Grid():
                     rowNumber = j
                 ))
 
-    def draw(self):
-        for tile in self.tiles:
-            tile.draw()
+
 
 
 class Interface(pyglet.window.Window):
@@ -121,5 +119,5 @@ if __name__ == '__main__':
     # window.push_handlers(event_logger)
 
     myGrid = Grid(width, height, 5, 5, batch=gridBatch)
-    myGrid.draw()
+
     pyglet.app.run()
