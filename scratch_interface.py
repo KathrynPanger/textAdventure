@@ -19,17 +19,6 @@ class Tile:
     lr: Point
     rowNumber: int
     columnNumber: int
-    batch: Batch = field(hash = False)
-    lines: list[shapes.Line] = field(default_factory = list, init = False, hash = False)
-    def __post_init__(self):
-        line = shapes.Line(*self.ul, *self.ur, width=2,
-                           batch=self.batch,
-                           color=(255, 255, 255))
-        self.lines.append(line)
-        line = shapes.Line(self.ll.x, self.ll.y, self.lr.x, self.lr.y, width=2,
-                           batch=self.batch,
-                           color=(255, 255, 255))
-        self.lines.append(line)
 
     def draw(self):
         pass
@@ -37,19 +26,34 @@ class Tile:
 
 @dataclass
 class Style:
-      borderColor: list[int]
-      boarderThickness: int
-      backgroundColor: list[int]
-      textColor: list[int]
+      borderColor: tuple(int)
+      borderThickness: int
+      backgroundColor: tuple(int)
+      textColor: tuple(int)
       textSize: int
       textFont: str
       textAnchor: str
 
-@dataclass
-class Region:
-    groupNumber:[int]
-    borders: list[str]
-    style: Style
+
+class Region():
+    def __init__ (self, groupNumber: int, style: Style, activeBorders: list, tiles: list, batch):
+        self.groupNumber = groupNumber
+        self.activeBorders = activeBorders
+        self.style = style
+        self.batch = batch
+        self.tiles = tiles
+        self.lines = [] # list[shapes.Line]
+        for tile in self.tiles:
+            ul = tile.ul
+            ur = tile.ur
+            ll = tile.ll
+            lr = tile.lr
+            borders = [[ul, ur], [ll, lr], [ul, ll], [ur, lr]]
+            line = shapes.Line(*self.ul, *self.ur,
+                               width=self.style.borderThickness,
+                               batch=self.batch,
+                               color=self.style.borderColor)
+
 
 class Grid():
     def __init__(self, width: int, height: int,
