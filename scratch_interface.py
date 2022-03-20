@@ -55,9 +55,9 @@ class Region():
                       group=background)
             for border in borders:
                 line = shapes.Line(border[0], border[1],
-                                   width=self.style.borderThickness,
-                                   batch=self.batch,
-                                   color=self.style.borderColor,
+                                   width = self.style.borderThickness,
+                                   batch = self.batch,
+                                   color = self.style.borderColor,
                                    group = foreground)
                 self.lines.append(line)
 
