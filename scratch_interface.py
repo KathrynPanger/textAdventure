@@ -49,10 +49,12 @@ class Region():
             ll = tile.ll
             lr = tile.lr
             borders = [[ul, ur], [ll, lr], [ul, ll], [ur, lr]]
-            line = shapes.Line(*self.ul, *self.ur,
-                               width=self.style.borderThickness,
-                               batch=self.batch,
-                               color=self.style.borderColor)
+            for border in borders:
+                line = shapes.Line(border[0], border[1],
+                                   width=self.style.borderThickness,
+                                   batch=self.batch,
+                                   color=self.style.borderColor)
+                self.lines.append(line)
 
 
 class Grid():
