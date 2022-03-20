@@ -63,13 +63,13 @@ class Grid():
         self.points = set()
         self.tiles = set()
         self.batch = batch
-        self.circles = []
+        #self.circles = []
         for i in range(self.numberOfColumns + 1):
             for j in range(self.numberOfRows + 1):
                 x = self.columnThickness * i
                 y = self.rowThickness * j
                 self.points.add(Point(x, y))
-                self.circles.append(shapes.Circle(x, y, 10, batch=self.batch))
+                #self.circles.append(shapes.Circle(x, y, 10, batch=self.batch))
                 if i == self.numberOfColumns or j == self.numberOfRows:
                     continue
                 self.tiles.add(Tile(
@@ -89,7 +89,7 @@ class Interface(pyglet.window.Window):
     def __init__(self, width, height, batches: list[Batch]):
         super(Interface, self).__init__()
 
-        self.label = pyglet.text.Label('Hello, world!')
+        self.label = pyglet.text.Label("")
         self.width = width
         self.height = height
         self.batches = batches
@@ -114,10 +114,11 @@ if __name__ == '__main__':
     height = 420
     lineBatch = Batch()
     gridBatch = Batch()
-    window = Interface(width, height, batches=[lineBatch, gridBatch])
+    myGrid = Grid(width, height, 5, 5, batch=gridBatch)
+    window = Interface(width, height, batches=[gridBatch])
     # event_logger = pyglet.window.event.WindowEventLogger()
     # window.push_handlers(event_logger)
 
-    myGrid = Grid(width, height, 5, 5, batch=gridBatch)
+
 
     pyglet.app.run()
