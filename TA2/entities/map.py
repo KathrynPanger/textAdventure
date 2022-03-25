@@ -15,6 +15,8 @@ class Map:
         self.entities: dict[Location, entity] = {}
         self.roomData: dict[str, str] = roomData
         for z, floor in layout.items():
+            #Json data thing
+            z = int(z)
             # Create room locations with x, y and z value using layout data
             for y, row in enumerate(floor):
                 for x, room in enumerate(row):
