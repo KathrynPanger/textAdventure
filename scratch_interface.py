@@ -123,6 +123,4 @@ if __name__ == '__main__':
     # event_logger = pyglet.window.event.WindowEventLogger()
     # window.push_handlers(event_logger)
 
-
-
     pyglet.app.run()

@@ -1,5 +1,5 @@
 from readData import read_rooms
-room_data = read_rooms("rooms.txt")
+room_data = read_rooms("data/rooms.txt")
 
 class Room:
     def __init__(self, name: str):

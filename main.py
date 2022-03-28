@@ -3,6 +3,8 @@ import command
 import action
 from items import Item, Category, Container
 
+room_data = read_rooms("data/rooms.txt")
+
 theLocation = map.playerLocation
 print(theLocation)
 
@@ -12,7 +14,5 @@ barrel = Container(name = "treasure_chest",
                    is_locked = True,
                    contents = [Item(name = 'necklace')],
                    capacity = 5)
-#barrel.modifyContainer(is_open = False, is_lockable = True, is_locked = True, contents = [Item("necklace",)], keyLocation = theLocation)
 print(theLocation.contents)
 print(barrel.contents)
-#print(f"You found a {barrel:key}!")

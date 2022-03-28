@@ -18,8 +18,6 @@ class Item:
     def __post_init__(self):
         if self.printedName is None:
             self.printedName = self.name
-        #printedName = printedName or name
-        #printedName = name if printedName is None else printedName
 
     def __str__(self):
         return self.printedName
