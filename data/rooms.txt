@@ -1,12 +1,12 @@
 name: Primary Infeed
-description: This is the primary recieving room for incoming packages. Central to this room is a package-carousel: a metal conveyor belt encircling a trapesoidal encasement with a large rectangular hole. Beyond this, two medium-sized square holes sit side by side along the northern wall. A red conveyor leads to the hole on the left, and a blue conveyor leads to the hole on the right. There is also an electronic panel here with several buttons and levers. 
+description: This is the primary recieving room for incoming packages. Central to this room is a package-carousel: a white conveyor belt encircling a trapesoidal encasement with a large rectangular hole. Beyond this, two medium-sized square holes sit side by side along the northern wall. A red conveyor leads to the hole on the left, and a blue conveyor leads to the hole on the right. There is also an electronic panel here with several buttons and levers. 
 exits: e,s
 contents: electronic panel, white conveyor belt, red conveyor belt, blue conveyor belt
 
 name: Mail Room
-description: The northern wall of this small nook is dominated by a large wooden rack of square cubicles for sorting letters. A second mail-recieving room is barely visible through it on the opposite side. On the eastern wall hangs a flat, narrow chute with a sheet-metal cover.
+description: The northern wall of this small nook is dominated by a large wooden rack of square cubicles for sorting letters. A mail-recieving room is barely visible through it on the opposite side. On the eastern wall hangs a flat, narrow chute with a sheet-metal cover.
 exits: w,n
-contents: rack, chute
+contents: rack, chute, cubicles
 
 name: Oversized Package Intake
 description: A large massive block of machinery spans the length the room. A sliding door of curved steel labeled "INTAKE" is built into its side. A large floor scale occupies the southeast corner.
