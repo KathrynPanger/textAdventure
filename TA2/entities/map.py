@@ -43,3 +43,5 @@ class Map:
 # #The Player's Location
 # playerLocation = map.layout[Location(0,0,0)]
 # #print(map.data)
+
+#To Do: complete map json
