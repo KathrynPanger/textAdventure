@@ -3,10 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="40816545-747e-4672-aae1-247377797c32" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TA2/entities/assembler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TA2/entities/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TA2/entities/room.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/room.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TA2/entities/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/data/mapData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/data/mapData2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/data/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/data/rooms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/entities/item.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/entities/map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/entities/player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/entities/room.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/interface/interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/interface/scratch_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/parser/action.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/utilities/assembler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/utilities/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/action.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adventure.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mapData.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/mapData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mapDataPackages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/rooms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/rooms.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideas/simpleMap.ods" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_scratch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/move.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readData.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/room.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slicer.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
