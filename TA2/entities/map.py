@@ -26,6 +26,8 @@ class Map:
                         description = roomData[room]["description"]
                         exits = roomData[room]["exits"]
                         contents = roomData[room]["contents"]
+                        if contents == ["None"]:
+                            contents = None
                         self.layout[loc] = Room(room, description, exits, contents)
 
 

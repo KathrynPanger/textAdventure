@@ -14,7 +14,7 @@ class Room:
         self.contents = contents
 
     def __repr__(self):
-        return f"Room: {self.name}"
+        return f"Room Object: {self.name}"
 
     def __hash__(self):
         return hash((self.name))
