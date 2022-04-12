@@ -6,8 +6,13 @@ def read_rooms(room_file):
         one_room= {}
         for info_string in text:
             if info_string:
-                property = info_string.split(": ")
-                one_room[property[0]] = property[1]
+                properties = info_string.split(": ")
+                property_type = properties[0]
+                property_content = properties[1]
+                room_listables = ["exits", "contents"]
+                if property_type in room_listables:
+                    property_content = property_content.split(",")
+                one_room[property_type] = property_content
 
             else:
                 all_rooms[one_room["name"]] = one_room

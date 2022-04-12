@@ -22,9 +22,9 @@ class Map:
                 for x, room in enumerate(row):
                     loc = Location(x,y,z)
             # Assign each location a room object using room data
-                    description = roomData["description"]
-                    exits = roomData["exits"]
-                    contents = roomData["items"]
+                    description = roomData[room]["description"]
+                    exits = roomData[room]["exits"]
+                    contents = roomData[room]["contents"]
                     self.layout[loc] = Room(room, description, exits, contents)
 
 
