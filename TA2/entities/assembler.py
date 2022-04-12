@@ -1,6 +1,9 @@
 from util import read_rooms
+import json
+from map import Map
 
-test = read_rooms("../data/rooms.txt")
-print(test["Primary Infeed"])
-
+roomData = read_rooms("../data/rooms.txt")
+layoutJson = open("../data/mapData.json")
+layoutJson = json.load(layoutJson)
+map = Map(layoutJson, roomData)
 

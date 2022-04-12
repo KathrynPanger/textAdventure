@@ -10,11 +10,11 @@ class Location(NamedTuple):
 
 
 class Map:
-    def __init__(self, layout, roomData):
+    def __init__(self, layoutJson, roomData):
         self.layout: dict[Location, Room] = {}
         self.entities: dict[Location, entity] = {}
         self.roomData: dict[str, str] = roomData
-        for z, floor in layout.items():
+        for z, floor in layoutJson.items():
             #Json data thing
             z = int(z)
             # Create room locations with x, y and z value using layout data
@@ -22,10 +22,11 @@ class Map:
                 for x, room in enumerate(row):
                     loc = Location(x,y,z)
             # Assign each location a room object using room data
-                    description = roomData[room]["description"]
-                    exits = roomData[room]["exits"]
-                    contents = roomData[room]["contents"]
-                    self.layout[loc] = Room(room, description, exits, contents)
+                    if room:
+                        description = roomData[room]["description"]
+                        exits = roomData[room]["exits"]
+                        contents = roomData[room]["contents"]
+                        self.layout[loc] = Room(room, description, exits, contents)
 
 
     def __getitem__(self, location: Location):

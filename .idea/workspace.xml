@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="40816545-747e-4672-aae1-247377797c32" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/data/rooms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/data/rooms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TA2/entities/assembler.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/assembler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/entities/item.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/item.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TA2/entities/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TA2/entities/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA2/entities/room.py" beforeDir="false" afterPath="$PROJECT_DIR$/TA2/entities/room.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

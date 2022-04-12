@@ -1,5 +1,5 @@
 from item import Item
-room_data = read_rooms("data/rooms.txt")
+#room_data = read_rooms("data/rooms.txt")
 
 class Room:
     def __init__(self, name: str,
