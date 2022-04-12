@@ -2,7 +2,6 @@ import pyglet
 from pyglet import shapes
 from typing import NamedTuple
 from dataclasses import dataclass, field
-
 from pyglet.graphics import Batch
 
 
