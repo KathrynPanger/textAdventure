@@ -1,3 +1,4 @@
+from __future__ import annotations
 from item import Item
 #room_data = read_rooms("data/rooms.txt")
 
@@ -21,6 +22,16 @@ class Room:
 
     def visit(self):
         self.is_visted = True
+
+    @classmethod
+    def createFromJson(cls, roomName: str,
+                       jsonDict: dict[str, str | list[str]]) -> Room:
+        description: str = jsonDict["description"]
+        exits: list[str] = jsonDict["exits"]
+        contents: list[str] = jsonDict["contents"]
+        if contents == ["None"]:
+            contents = []
+        return Room(roomName, description, exits, contents)
 
 
 

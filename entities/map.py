@@ -23,12 +23,9 @@ class Map:
                     loc = Location(x,y,z)
             # Assign each location a room object using room data
                     if room:
-                        description = roomData[room]["description"]
-                        exits = roomData[room]["exits"]
-                        contents = roomData[room]["contents"]
-                        if contents == ["None"]:
-                            contents = None
-                        self.layout[loc] = Room(room, description, exits, contents)
+
+                        self.layout[loc] = Room.createFromJson(room,
+                                                               roomData[room])
 
 
     def __getitem__(self, location: Location):
