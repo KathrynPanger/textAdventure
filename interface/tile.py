@@ -1,4 +1,11 @@
 from dataclasses import dataclass, field
+from pyglet.graphics import Batch
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from interface.region import Region
+    from interface.line import Line
+    from interface.point import Point
 
 
 @dataclass(frozen = True)
@@ -9,17 +16,9 @@ class Tile:
     lr: Point
     rowNumber: int
     columnNumber: int
+    region: Region
     batch: Batch = field(hash = False)
-    lines: list[shapes.Line] = field(default_factory = list, init = False, hash = False)
-    def __post_init__(self):
-        line = shapes.Line(*self.ul, *self.ur, width=2,
-                           batch=self.batch,
-                           color=(255, 255, 255))
-        self.lines.append(line)
-        line = shapes.Line(self.ll.x, self.ll.y, self.lr.x, self.lr.y, width=2,
-                           batch=self.batch,
-                           color=(255, 255, 255))
-        self.lines.append(line)
+    lines: list[Line] = field(default_factory = list, init = False, hash = False)
 
-    def draw(self):
-        pass
+    def addLine(self, line: Line):
+        self.lines.append(line)
